@@ -135,8 +135,19 @@ http://localhost:3000
 ---
 
 # 📷 Screenshots
+<img width="473" height="506" alt="image" src="https://github.com/user-attachments/assets/6b221e21-50d4-4352-890c-3a4d69d3d88e" /> Register For New User
+<img width="326" height="327" alt="image" src="https://github.com/user-attachments/assets/961b3b6c-8008-4f07-aec4-fdeab291aebf" /> Login for Existing User
 
-i will provide sometime
+
+<img width="1891" height="899" alt="image" src="https://github.com/user-attachments/assets/37b8af56-92af-4ba9-bddd-24cacbfbabdd" />
+<img width="1840" height="908" alt="image" src="https://github.com/user-attachments/assets/0a507ede-0f3f-4f81-b888-51f434317d55" />
+<img width="1207" height="909" alt="image" src="https://github.com/user-attachments/assets/8231e7f0-c269-44a4-954b-bc14d6aa7db7" />
+<img width="1732" height="843" alt="image" src="https://github.com/user-attachments/assets/a0af1fd0-83fe-4d1c-8940-8f6a80f071aa" />
+<img width="1245" height="873" alt="image" src="https://github.com/user-attachments/assets/047107d8-c850-42b9-85f9-d130ddf6a7d4" />
+<img width="1156" height="902" alt="image" src="https://github.com/user-attachments/assets/07b97f1c-653f-4b91-9288-2e7dfacb3e8f" />
+
+
+
 ---
 
 # 🚀 Future Improvements
