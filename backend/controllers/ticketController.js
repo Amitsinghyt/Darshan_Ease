@@ -9,7 +9,7 @@ const getTicketByBookingId = async (req, res) => {
       path: 'bookingId',
       populate: {
         path: 'slotId',
-        populate: { path: 'templeId', select: 'templeName location' },
+        populate: { path: 'templeId', select: 'templeName location latitude longitude image' },
       },
     });
 

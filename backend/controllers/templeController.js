@@ -33,7 +33,7 @@ const getTempleById = async (req, res) => {
 // @route   POST /api/temples
 // @access  Private/Admin
 const createTemple = async (req, res) => {
-  const { templeName, location, darshanStartTime, darshanEndTime, description, image } = req.body;
+  const { templeName, location, darshanStartTime, darshanEndTime, description, image, latitude, longitude } = req.body;
 
   try {
     const localImage = await handleImageDownload(templeName, image);
@@ -44,6 +44,8 @@ const createTemple = async (req, res) => {
       darshanEndTime,
       description,
       image: localImage,
+      latitude: latitude ? Number(latitude) : undefined,
+      longitude: longitude ? Number(longitude) : undefined,
     });
 
     const createdTemple = await temple.save();
@@ -57,7 +59,7 @@ const createTemple = async (req, res) => {
 // @route   PUT /api/temples/:id
 // @access  Private/Admin
 const updateTemple = async (req, res) => {
-  const { templeName, location, darshanStartTime, darshanEndTime, description, image } = req.body;
+  const { templeName, location, darshanStartTime, darshanEndTime, description, image, latitude, longitude } = req.body;
 
   try {
     const temple = await Temple.findById(req.params.id);
@@ -70,6 +72,8 @@ const updateTemple = async (req, res) => {
       temple.darshanStartTime = darshanStartTime || temple.darshanStartTime;
       temple.darshanEndTime = darshanEndTime || temple.darshanEndTime;
       temple.description = description || temple.description;
+      if (latitude !== undefined) temple.latitude = Number(latitude);
+      if (longitude !== undefined) temple.longitude = Number(longitude);
       if (localImage !== undefined) {
         temple.image = localImage;
       }

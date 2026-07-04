@@ -8,6 +8,8 @@ const templeSchema = mongoose.Schema(
     darshanEndTime: { type: String, required: true },
     description: { type: String },
     image: { type: String },
+    latitude: { type: Number },
+    longitude: { type: Number },
   },
   { timestamps: true }
 );

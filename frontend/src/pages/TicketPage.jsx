@@ -4,6 +4,7 @@ import { getTicketByBookingId } from '../services/bookingService';
 import { AuthContext } from '../context/AuthContext';
 import { QRCodeSVG } from 'qrcode.react';
 import { MapPin, Calendar, Clock, User, CheckCircle, Printer, ArrowLeft } from 'lucide-react';
+import TempleNavigator from '../components/TempleNavigator';
 
 const TicketPage = () => {
   const { bookingId } = useParams();
@@ -13,6 +14,7 @@ const TicketPage = () => {
   const [ticket, setTicket] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [showNavigation, setShowNavigation] = useState(false);
 
   useEffect(() => {
     if (!userInfo) { navigate('/login'); return; }
@@ -140,15 +142,45 @@ const TicketPage = () => {
         </div>
 
         {/* Actions */}
-        <div className="ticket-actions no-print">
-          <button className="btn btn-outline" onClick={() => navigate('/history')}>
-            <ArrowLeft size={16} /> My Bookings
+        <div className="ticket-actions no-print" style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+          <button 
+            className="btn" 
+            id="navigate-temple-btn"
+            onClick={() => setShowNavigation(true)} 
+            style={{ 
+              width: '100%', 
+              display: 'flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              gap: '8px', 
+              background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)', 
+              color: 'white', 
+              border: 'none', 
+              padding: '14px', 
+              borderRadius: 'var(--radius-sm)', 
+              fontWeight: '700', 
+              fontSize: '1rem', 
+              cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(249, 115, 22, 0.4)',
+              transition: 'all 0.3s ease'
+            }}
+          >
+            <MapPin size={18} /> 🗺️ Navigate to Temple
           </button>
-          <button className="btn btn-primary" onClick={handlePrint}>
-            <Printer size={16} /> Print Ticket
-          </button>
+          <div style={{ display: 'flex', gap: '12px', width: '100%' }}>
+            <button className="btn btn-outline" style={{ flex: 1 }} onClick={() => navigate('/history')}>
+              <ArrowLeft size={16} /> My Bookings
+            </button>
+            <button className="btn btn-primary" style={{ flex: 1 }} onClick={handlePrint}>
+              <Printer size={16} /> Print Ticket
+            </button>
+          </div>
         </div>
       </div>
+      
+      {showNavigation && temple && (
+        <TempleNavigator temple={temple} onClose={() => setShowNavigation(false)} />
+      )}
     </div>
   );
 };

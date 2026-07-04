@@ -25,7 +25,9 @@ const AdminDashboard = () => {
     darshanStartTime: '06:00',
     darshanEndTime: '20:00',
     description: '',
-    image: ''
+    image: '',
+    latitude: '',
+    longitude: ''
   });
 
   useEffect(() => {
@@ -66,7 +68,9 @@ const AdminDashboard = () => {
         darshanStartTime: '06:00',
         darshanEndTime: '20:00',
         description: '',
-        image: ''
+        image: '',
+        latitude: '',
+        longitude: ''
       });
       showToast('Temple profile created successfully.', 'success');
       
@@ -313,6 +317,14 @@ const AdminDashboard = () => {
                   <div className="form-group" style={{ gridColumn: 'span 2' }}>
                     <label>Image URL</label>
                     <input name="image" value={formData.image} onChange={handleChange} placeholder="https://example.com/image.jpg" />
+                  </div>
+                  <div className="form-group">
+                    <label>Latitude (optional)</label>
+                    <input type="number" step="any" name="latitude" value={formData.latitude} onChange={handleChange} placeholder="e.g. 20.8880" />
+                  </div>
+                  <div className="form-group">
+                    <label>Longitude (optional)</label>
+                    <input type="number" step="any" name="longitude" value={formData.longitude} onChange={handleChange} placeholder="e.g. 70.4012" />
                   </div>
                   <div className="form-group" style={{ gridColumn: 'span 2' }}>
                     <label>Description</label>
