@@ -136,10 +136,11 @@ http://localhost:3000
 
 # 📷 Screenshots
 <img width="473" height="506" alt="image" src="https://github.com/user-attachments/assets/6b221e21-50d4-4352-890c-3a4d69d3d88e" />
-Register For New User
+
+                        Register For New User
 <img width="326" height="327" alt="image" src="https://github.com/user-attachments/assets/961b3b6c-8008-4f07-aec4-fdeab291aebf" />
 
-                                                                                        Login for Existing User
+                       Login for Existing User
 
 
 <img width="1920" height="932" alt="Screenshot 2026-07-11 012033" src="https://github.com/user-attachments/assets/d14c91f8-fc9b-4821-a2de-4dcd27842ff4" />
