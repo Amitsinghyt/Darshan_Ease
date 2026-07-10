@@ -188,13 +188,14 @@ This project is licensed under the **Apache License**.
 GitHub  
 https://github.com/Amitsinghyt
 
-Instagram  
-https://instagram.com/amitsingh_yt
-
 Linkdin
 https://www.linkedin.com/in/amitsinghyt/
+
 Twitter / X
-(https://x.com/amitsingh_ytt)
+https://x.com/amitsingh_ytt
+
+Instagram  
+https://instagram.com/amitsingh_yt
 
 
 ---
