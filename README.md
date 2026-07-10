@@ -192,9 +192,9 @@ Instagram
 https://instagram.com/amitsingh_yt
 
 Linkdin
---------
-Twitter
---
+https://www.linkedin.com/in/amitsinghyt/
+Twitter / X
+(https://x.com/amitsingh_ytt)
 
 
 ---
